@@ -8,10 +8,15 @@
 
 import Foundation
 
-class Subject {
+class Subject:CustomDebugStringConvertible {
     
     var name:String
     var id:Int
+    
+    var debugDescription: String {
+        return "[\"name\":\(name), \"id\":\(id)]"
+    }
+    
     
     init(name:String, id:Int) {
         self.id = id

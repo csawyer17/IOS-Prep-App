@@ -8,10 +8,14 @@
 
 import Foundation
 
-class Teacher {
+class Teacher:CustomDebugStringConvertible {
     var firstname:String
     var lastname:String
     var id:Int
+    
+    var debugDescription: String {
+        return "[\"firstname\": \(firstname),\"lastname\": \(lastname),\"id\": \(id)]"
+    }
     
     init(firstname:String, lastname:String, id:Int) {
         self.firstname = firstname
