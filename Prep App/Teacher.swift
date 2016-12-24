@@ -18,8 +18,4 @@ class Teacher {
         self.lastname = lastname
         self.id = id
     }
-    
-    func updateTeacher() {
-        
-    }
 }
