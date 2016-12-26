@@ -8,9 +8,21 @@
 
 import Foundation
 
-class SchoolClass {
+class SchoolClass:CustomDebugStringConvertible {
+    var id:Int
+    var name:String
+    var teacherId:Int
+    var subjectId:Int
     
-    init() {
-        
+    var debugDescription: String {
+        return "[\"id\":\(id), \"name\":\(name), \"teacherId\":\(teacherId), \"subjectId\":\(subjectId)]"
+    }
+    
+    
+    init(id:Int, name:String, teacherId:Int, subjectId:Int) {
+        self.id = id
+        self.name = name
+        self.teacherId = teacherId
+        self.subjectId = subjectId
     }
 }

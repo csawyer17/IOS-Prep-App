@@ -89,28 +89,32 @@ func getSubjects() -> [Subject] {
 }
 
 func getClassesFromTeacher(teacher:Teacher)->[SchoolClass] {
-    
-    
     var resultArray = [SchoolClass]()
     
-    //creates a semaphore to handle async requests
     let semaphore = dispatch_semaphore_create(0)
     
-    //creates the get request to the URL http://198.199.123.216/api/getsubjects
-    //and parses JSON
     Alamofire.request(.GET, "\(baseURL)getClassesFromTeacherId/\(teacher.id)").responseJSON() { response in
-        if let json = response.result.value {
-            print(json)
+        if let json = response.result.value  {
+            let jsonResponse = json as! NSDictionary
+            for item in jsonResponse {
+                let id = item.value["id"] as! Int
+                let name = item.value["name"] as! String
+                let subjectId = item.value["subject"] as! Int
+                let teacherId = item.value["teacher_id"] as! Int
+                
+                let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId)
+                print(schoolClass)
+                resultArray.append(schoolClass)
+                
+            }
         }
+        //dispatch the semaphore to inform the main thread that the request has finished
+        dispatch_semaphore_signal(semaphore)
     }
     
-    //wait for request to finish
     while dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW) != 0 {
         NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate(timeIntervalSinceNow: 10))
     }
     
     return resultArray
-    
-    
-    return[]
 }

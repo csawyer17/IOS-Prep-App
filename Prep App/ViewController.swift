@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClick(sender: AnyObject) {
+        print("Making requests")
         print(getSubjects())
         print(getTeachers())
         for teacher in getTeachers() {
