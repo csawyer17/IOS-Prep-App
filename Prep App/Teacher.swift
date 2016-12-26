@@ -13,6 +13,8 @@ class Teacher:CustomDebugStringConvertible {
     var lastname:String
     var id:Int
     
+    var classes:[SchoolClass]?
+    
     var debugDescription: String {
         return "[\"firstname\": \(firstname),\"lastname\": \(lastname),\"id\": \(id)]"
     }
@@ -21,5 +23,12 @@ class Teacher:CustomDebugStringConvertible {
         self.firstname = firstname
         self.lastname = lastname
         self.id = id
+    }
+    
+    func getClasses(refresh:Bool)->[SchoolClass]? {
+        if !refresh {
+            return classes
+        }
+        return getClassesFromTeacher(self);
     }
 }

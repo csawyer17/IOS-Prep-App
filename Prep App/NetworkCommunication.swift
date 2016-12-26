@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-let baseURL = "https://prapp-api.000webhostapp.com/api/"
+let baseURL = "http://198.199.123.216/api/"
 
 
 /**
@@ -21,7 +21,7 @@ func getTeachers() -> [Teacher] {
     //creates a semaphore to handle async requests
     let semaphore = dispatch_semaphore_create(0)
     
-    //creates the get request to the URL https://prapp-api.000webhostapp.com/api/getteachers
+    //creates the get request to the URL http://198.199.123.216//api/getteachers
     //and parses JSON
     Alamofire.request(.GET, "\(baseURL)getTeachers").responseJSON() { response in
         if let json = response.result.value {
@@ -58,7 +58,7 @@ func getSubjects() -> [Subject] {
     //creates a semaphore to handle async requests
     let semaphore = dispatch_semaphore_create(0)
     
-    //creates the get request to the URL https://prapp-api.000webhostapp.com/api/getsubjects
+    //creates the get request to the URL http://198.199.123.216/api/getsubjects
     //and parses JSON
     Alamofire.request(.GET, "\(baseURL)getSubjects").responseJSON() { response in
         if let json = response.result.value {
@@ -86,4 +86,31 @@ func getSubjects() -> [Subject] {
     }
     
     return resultArray
+}
+
+func getClassesFromTeacher(teacher:Teacher)->[SchoolClass] {
+    
+    
+    var resultArray = [SchoolClass]()
+    
+    //creates a semaphore to handle async requests
+    let semaphore = dispatch_semaphore_create(0)
+    
+    //creates the get request to the URL http://198.199.123.216/api/getsubjects
+    //and parses JSON
+    Alamofire.request(.GET, "\(baseURL)getClassesFromTeacherId/\(teacher.id)").responseJSON() { response in
+        if let json = response.result.value {
+            print(json)
+        }
+    }
+    
+    //wait for request to finish
+    while dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW) != 0 {
+        NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate(timeIntervalSinceNow: 10))
+    }
+    
+    return resultArray
+    
+    
+    return[]
 }

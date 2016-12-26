@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C30D10E1E118F5200D191BF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30D10D1E118F5200D191BF /* DataCache.swift */; };
+		4C30D1171E11903100D191BF /* SchoolClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30D1161E11903100D191BF /* SchoolClass.swift */; };
 		4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */; };
 		4CD3EB611E0E12ED00AAFE90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB601E0E12ED00AAFE90 /* ViewController.swift */; };
 		4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */; };
@@ -93,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C30D10D1E118F5200D191BF /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		4C30D1161E11903100D191BF /* SchoolClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolClass.swift; sourceTree = "<group>"; };
 		4CD3EB5B1E0E12ED00AAFE90 /* Prep App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prep App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD3EB601E0E12ED00AAFE90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				4CD3EB8E1E0E132600AAFE90 /* NetworkCommunication.swift */,
 				4CD3EB951E0E138200AAFE90 /* Teacher.swift */,
 				4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */,
+				4C30D10D1E118F5200D191BF /* DataCache.swift */,
+				4C30D1161E11903100D191BF /* SchoolClass.swift */,
 			);
 			path = "Prep App";
 			sourceTree = "<group>";
@@ -298,7 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD3EB961E0E138200AAFE90 /* Teacher.swift in Sources */,
+				4C30D1171E11903100D191BF /* SchoolClass.swift in Sources */,
 				4CD3EBB51E0E1C9500AAFE90 /* Subject.swift in Sources */,
+				4C30D10E1E118F5200D191BF /* DataCache.swift in Sources */,
 				4CD3EB611E0E12ED00AAFE90 /* ViewController.swift in Sources */,
 				4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */,
 				4CD3EB8F1E0E132600AAFE90 /* NetworkCommunication.swift in Sources */,
