@@ -10,7 +10,9 @@
 		4C30D10E1E118F5200D191BF /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30D10D1E118F5200D191BF /* DataCache.swift */; };
 		4C30D1171E11903100D191BF /* SchoolClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30D1161E11903100D191BF /* SchoolClass.swift */; };
 		4C4231411E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */; };
-		4C42314A1E11ADE700DCCBE9 /* teacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231491E11ADE700DCCBE9 /* teacherListTableViewController.swift */; };
+		4C42314A1E11ADE700DCCBE9 /* TeacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */; };
+		4C83FC561E11DFC000919DF5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD3EBA31E0E13C800AAFE90 /* Alamofire.framework */; };
+		4C83FC571E11DFC000919DF5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD3EBA31E0E13C800AAFE90 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */; };
 		4CD3EB611E0E12ED00AAFE90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB601E0E12ED00AAFE90 /* ViewController.swift */; };
 		4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */; };
@@ -18,12 +20,18 @@
 		4CD3EB691E0E12ED00AAFE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */; };
 		4CD3EB8F1E0E132600AAFE90 /* NetworkCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB8E1E0E132600AAFE90 /* NetworkCommunication.swift */; };
 		4CD3EB961E0E138200AAFE90 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB951E0E138200AAFE90 /* Teacher.swift */; };
-		4CD3EBB01E0E13D400AAFE90 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD3EBA31E0E13C800AAFE90 /* Alamofire.framework */; };
-		4CD3EBB11E0E13D400AAFE90 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD3EBA31E0E13C800AAFE90 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CD3EBB51E0E1C9500AAFE90 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */; };
+		4CDDF4A81E11D8D70044DCD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDF4A71E11D8D70044DCD4 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C83FC581E11DFC000919DF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD3EB971E0E13C800AAFE90 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		4CD3EBA21E0E13C800AAFE90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CD3EB971E0E13C800AAFE90 /* Alamofire.xcodeproj */;
@@ -73,23 +81,16 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		4CD3EBB21E0E13D400AAFE90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CD3EB971E0E13C800AAFE90 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4CD3EB941E0E135100AAFE90 /* Embed Frameworks */ = {
+		4C83FC5A1E11DFC000919DF5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4CD3EBB11E0E13D400AAFE90 /* Alamofire.framework in Embed Frameworks */,
+				4C83FC571E11DFC000919DF5 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +101,7 @@
 		4C30D10D1E118F5200D191BF /* DataCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		4C30D1161E11903100D191BF /* SchoolClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolClass.swift; sourceTree = "<group>"; };
 		4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrolledClassesTableViewController.swift; sourceTree = "<group>"; };
-		4C4231491E11ADE700DCCBE9 /* teacherListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teacherListTableViewController.swift; sourceTree = "<group>"; };
+		4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewController.swift; sourceTree = "<group>"; };
 		4CD3EB5B1E0E12ED00AAFE90 /* Prep App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prep App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD3EB601E0E12ED00AAFE90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		4CD3EB951E0E138200AAFE90 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		4CD3EB971E0E13C800AAFE90 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-3.5-3.0/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		4CDDF4A71E11D8D70044DCD4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD3EBB01E0E13D400AAFE90 /* Alamofire.framework in Frameworks */,
+				4C83FC561E11DFC000919DF5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +160,8 @@
 				4C30D10D1E118F5200D191BF /* DataCache.swift */,
 				4C30D1161E11903100D191BF /* SchoolClass.swift */,
 				4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */,
-				4C4231491E11ADE700DCCBE9 /* teacherListTableViewController.swift */,
+				4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */,
+				4CDDF4A71E11D8D70044DCD4 /* User.swift */,
 			);
 			path = "Prep App";
 			sourceTree = "<group>";
@@ -187,12 +190,12 @@
 				4CD3EB571E0E12ED00AAFE90 /* Sources */,
 				4CD3EB581E0E12ED00AAFE90 /* Frameworks */,
 				4CD3EB591E0E12ED00AAFE90 /* Resources */,
-				4CD3EB941E0E135100AAFE90 /* Embed Frameworks */,
+				4C83FC5A1E11DFC000919DF5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4CD3EBB31E0E13D400AAFE90 /* PBXTargetDependency */,
+				4C83FC591E11DFC000919DF5 /* PBXTargetDependency */,
 			);
 			name = "Prep App";
 			productName = "Prep App";
@@ -312,11 +315,12 @@
 				4CD3EB961E0E138200AAFE90 /* Teacher.swift in Sources */,
 				4C30D1171E11903100D191BF /* SchoolClass.swift in Sources */,
 				4CD3EBB51E0E1C9500AAFE90 /* Subject.swift in Sources */,
-				4C42314A1E11ADE700DCCBE9 /* teacherListTableViewController.swift in Sources */,
+				4C42314A1E11ADE700DCCBE9 /* TeacherListTableViewController.swift in Sources */,
 				4C30D10E1E118F5200D191BF /* DataCache.swift in Sources */,
 				4CD3EB611E0E12ED00AAFE90 /* ViewController.swift in Sources */,
 				4C4231411E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift in Sources */,
 				4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */,
+				4CDDF4A81E11D8D70044DCD4 /* User.swift in Sources */,
 				4CD3EB8F1E0E132600AAFE90 /* NetworkCommunication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,10 +328,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4CD3EBB31E0E13D400AAFE90 /* PBXTargetDependency */ = {
+		4C83FC591E11DFC000919DF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 4CD3EBB21E0E13D400AAFE90 /* PBXContainerItemProxy */;
+			targetProxy = 4C83FC581E11DFC000919DF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -25,4 +25,13 @@ class SchoolClass:CustomDebugStringConvertible {
         self.teacherId = teacherId
         self.subjectId = subjectId
     }
+    
+    func getTeacher()->Teacher? {
+        for teacher in getTeachers() {
+            if teacher.id == teacherId {
+                return teacher
+            }
+        }
+        return nil
+    }
 }

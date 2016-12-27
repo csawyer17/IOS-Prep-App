@@ -9,6 +9,7 @@
 import Foundation
 
 class Teacher:CustomDebugStringConvertible {
+    
     var firstname:String
     var lastname:String
     var id:Int
@@ -31,4 +32,5 @@ class Teacher:CustomDebugStringConvertible {
         }
         return getClassesFromTeacher(self);
     }
+
 }
