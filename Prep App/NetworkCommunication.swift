@@ -100,8 +100,16 @@ func getClassesFromTeacher(teacher:Teacher)->[SchoolClass] {
                 let name = item.value["name"] as! String
                 let subjectId = item.value["subject"] as! Int
                 let teacherId = item.value["teacher_id"] as! Int
+                let blockNum = item.value["block"]
                 
-                let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId)
+                var blockNumOptional:Int?
+                if blockNum is NSNull {
+                    blockNumOptional = nil
+                } else {
+                    blockNumOptional = blockNum as! Int?
+                }
+                
+                let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId, blockNum: blockNumOptional)
                 print(schoolClass)
                 resultArray.append(schoolClass)
                 
@@ -185,8 +193,16 @@ func getClasses()->[SchoolClass] {
                 let teacherId = schoolClassDict["teacher_id"] as! Int
                 let name = schoolClassDict["name"] as! String
                 let subjectId = schoolClassDict["subject"] as! Int
+                let blockNum = schoolClassDict["block"]
                 
-                let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId)
+                var blockNumOptional:Int?
+                if blockNum is NSNull {
+                    blockNumOptional = nil
+                } else {
+                    blockNumOptional = blockNum as! Int?
+                }
+                
+                let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId, blockNum: blockNumOptional)
                 resultArray.append(schoolClass)
                 
                 //dispatch the semaphore to inform the main thread that the request has finished

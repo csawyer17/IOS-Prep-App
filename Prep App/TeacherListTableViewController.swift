@@ -12,6 +12,7 @@ class TeacherListTableViewController: UITableViewController {
 
     var teachers:[Teacher]!
     
+    static var selectedteacher:Teacher?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,8 @@ class TeacherListTableViewController: UITableViewController {
     
     func refresh() {
         teachers = getTeachers()
-        self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,6 +44,15 @@ class TeacherListTableViewController: UITableViewController {
         
         cell.textLabel!.text = "\(first) \(last)"
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTeacherClassesSegue" {
+            let cell = sender as! UITableViewCell
+            let index = super.tableView.indexPathForCell(cell)?.row
+            let teacher = teachers[index!]
+            TeacherListTableViewController.selectedteacher = teacher
+        }
     }
     
 }
