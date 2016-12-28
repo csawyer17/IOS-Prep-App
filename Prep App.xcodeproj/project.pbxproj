@@ -137,6 +137,35 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		4C88D8941E135BD8009707EB /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */,
+				4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */,
+				4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		4C88D8951E135BF2009707EB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */,
+				4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		4C88D8961E135BFB009707EB /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */,
+				4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */,
+				4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */,
+			);
+			name = "supporting files";
+			sourceTree = "<group>";
+		};
 		4CD3EB521E0E12ED00AAFE90 = {
 			isa = PBXGroup;
 			children = (
@@ -157,16 +186,11 @@
 		4CD3EB5D1E0E12ED00AAFE90 /* Prep App */ = {
 			isa = PBXGroup;
 			children = (
-				4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */,
-				4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */,
-				4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */,
-				4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */,
-				4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */,
+				4C88D8961E135BFB009707EB /* supporting files */,
+				4C88D8951E135BF2009707EB /* view */,
 				4C30D10D1E118F5200D191BF /* DataCache.swift */,
 				4C88D8911E1315C1009707EB /* models */,
-				4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */,
-				4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */,
-				4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */,
+				4C88D8941E135BD8009707EB /* controllers */,
 			);
 			path = "Prep App";
 			sourceTree = "<group>";
