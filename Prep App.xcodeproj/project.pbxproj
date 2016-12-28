@@ -18,7 +18,6 @@
 		4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */; };
 		4CD3EB661E0E12ED00AAFE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */; };
 		4CD3EB691E0E12ED00AAFE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */; };
-		4CD3EB8F1E0E132600AAFE90 /* NetworkCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB8E1E0E132600AAFE90 /* NetworkCommunication.swift */; };
 		4CD3EB961E0E138200AAFE90 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB951E0E138200AAFE90 /* Teacher.swift */; };
 		4CD3EBB51E0E1C9500AAFE90 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */; };
 		4CDDF4A81E11D8D70044DCD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDF4A71E11D8D70044DCD4 /* User.swift */; };
@@ -109,7 +108,6 @@
 		4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD3EB681E0E12ED00AAFE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CD3EB8E1E0E132600AAFE90 /* NetworkCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCommunication.swift; sourceTree = "<group>"; };
 		4CD3EB951E0E138200AAFE90 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		4CD3EB971E0E13C800AAFE90 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-3.5-3.0/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */,
 				4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */,
 				4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */,
-				4CD3EB8E1E0E132600AAFE90 /* NetworkCommunication.swift */,
 				4C30D10D1E118F5200D191BF /* DataCache.swift */,
 				4C88D8911E1315C1009707EB /* models */,
 				4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */,
@@ -329,7 +326,6 @@
 				4C4231411E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift in Sources */,
 				4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */,
 				4CDDF4A81E11D8D70044DCD4 /* User.swift in Sources */,
-				4CD3EB8F1E0E132600AAFE90 /* NetworkCommunication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
