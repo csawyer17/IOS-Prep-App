@@ -11,6 +11,8 @@ import Alamofire
 
 let dataSource = DataCache()
 
+let baseURL = "http://198.199.123.216/api/"
+
 class DataCache {
     
     var teachers:[Teacher]?
@@ -39,9 +41,6 @@ class DataCache {
         }
         return subjects!
     }
-    
-    
-    let baseURL = "http://198.199.123.216/api/"
     
     /**
      *  Gets the teachers in the database
@@ -141,7 +140,6 @@ class DataCache {
                     }
                     
                     let schoolClass = SchoolClass(id: id, name: name, teacherId: teacherId, subjectId: subjectId, blockNum: blockNumOptional)
-                    print(schoolClass)
                     resultArray.append(schoolClass)
                     
                 }

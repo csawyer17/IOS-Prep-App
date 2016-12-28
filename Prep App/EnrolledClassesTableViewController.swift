@@ -14,8 +14,14 @@ class EnrolledClassesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         classes = dataSource.user!.getEnrolledClasses(true)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        classes = dataSource.user!.getEnrolledClasses(true)
+        print(classes)
+        tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

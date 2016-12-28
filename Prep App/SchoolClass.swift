@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class SchoolClass:CustomDebugStringConvertible {
     var id:Int
@@ -47,6 +48,6 @@ class SchoolClass:CustomDebugStringConvertible {
     }
     
     func enrollStudent(user:User)  {
-        
+        Alamofire.request(.GET, "\(baseURL)enrollInClass/\(user.id!)/\(id)")
     }
 }
