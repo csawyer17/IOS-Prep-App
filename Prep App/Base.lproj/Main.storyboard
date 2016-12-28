@@ -13,14 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xgJ-8d-RVB">
-                            <rect key="frame" x="0.0" y="164" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Add Class"/>
-                            <connections>
-                                <segue destination="5YB-yq-FiU" kind="show" id="gkA-CX-pfa"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="eYG-xt-5MD" detailTextLabel="AgM-Wd-qHs" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="Ahd-i2-X9g">
                                 <rect key="frame" x="0.0" y="92" width="600" height="72"/>
@@ -56,7 +48,18 @@
                             <outlet property="delegate" destination="6yt-ap-WfB" id="yfw-oe-Hx4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Classes" id="Kuu-Cz-ocF"/>
+                    <navigationItem key="navigationItem" title="Your Classes" id="Kuu-Cz-ocF">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ULa-3O-aTq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xgJ-8d-RVB">
+                                <rect key="frame" x="480" y="0.0" width="100" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Class"/>
+                                <connections>
+                                    <segue destination="5YB-yq-FiU" kind="show" id="gkA-CX-pfa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iS-rm-jcq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="2840" y="311"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="8h6-0L-RLO">
             <objects>
                 <viewController id="Hno-7i-KMh" sceneMemberID="viewController">
@@ -160,13 +163,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="lne-s1-as4"/>
+                    <tabBarItem key="tabBarItem" image="ic_chat_48pt" selectedImage="ic_chat_48pt" id="lne-s1-as4">
+                        <inset key="imageInsets" minX="3" minY="9" maxX="3" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMF-vX-s2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2097" y="1828"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="zZH-W9-r4Q">
             <objects>
                 <viewController id="xf9-wQ-LOp" sceneMemberID="viewController">
@@ -179,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="ic_comment" id="ggg-E5-7Ui"/>
+                    <tabBarItem key="tabBarItem" selectedImage="ic_chat_48pt" id="ggg-E5-7Ui"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRf-RI-4dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,6 +229,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_comment" width="24" height="24"/>
+        <image name="ic_chat_48pt" width="48" height="48"/>
     </resources>
 </document>
