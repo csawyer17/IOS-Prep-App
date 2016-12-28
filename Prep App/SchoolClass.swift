@@ -38,11 +38,15 @@ class SchoolClass:CustomDebugStringConvertible {
     }
     
     func getTeacher()->Teacher? {
-        for teacher in getTeachers() {
+        for teacher in dataSource.getTeachers() {
             if teacher.id == teacherId {
                 return teacher
             }
         }
         return nil
+    }
+    
+    func enrollStudent(user:User)  {
+        
     }
 }

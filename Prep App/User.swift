@@ -13,7 +13,16 @@ class User {
     var password:String?
     var id:Int?
     
+    var enrolledClasses:[SchoolClass]?
+    
     init(username:String, password:String) {
         //TODO
+    }
+    
+    func getEnrolledClasses(refresh:Bool) ->[SchoolClass] {
+        if enrolledClasses == nil || refresh {
+            enrolledClasses = dataSource.getEnrolledClasses(self)
+        }
+        return enrolledClasses!
     }
 }

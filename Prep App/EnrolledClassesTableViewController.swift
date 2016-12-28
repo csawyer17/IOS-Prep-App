@@ -10,14 +10,12 @@ import UIKit
 
 class EnrolledClassesTableViewController: UITableViewController {
     
-    var classes:[SchoolClass]?
+    var classes:[SchoolClass]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = User(username: "Chris", password: "Password")
-        user.id = 1
         
-        classes = getEnrolledClasses(user)
+        classes = dataSource.user!.getEnrolledClasses(true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

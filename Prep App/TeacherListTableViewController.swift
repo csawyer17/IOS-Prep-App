@@ -17,19 +17,7 @@ class TeacherListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        teachers = getTeachers()
-        
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl?.addTarget(self, action: #selector(TeacherListTableViewController.refresh), forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl!)
-
-    }
-    
-    func refresh() {
-        teachers = getTeachers()
-        self.refreshControl?.endRefreshing()
-        self.tableView.reloadData()
+        teachers = dataSource.getTeachers(false)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

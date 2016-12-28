@@ -14,7 +14,7 @@ class Teacher:CustomDebugStringConvertible {
     var lastname:String
     var id:Int
     
-    var classes:[SchoolClass]?
+    private var classes:[SchoolClass]?
     
     var debugDescription: String {
         return "[\"firstname\": \(firstname),\"lastname\": \(lastname),\"id\": \(id)]"
@@ -30,7 +30,7 @@ class Teacher:CustomDebugStringConvertible {
         if !refresh {
             return classes
         }
-        return getClassesFromTeacher(self);
+        return dataSource.getClassesFromTeacher(self);
     }
 
 }

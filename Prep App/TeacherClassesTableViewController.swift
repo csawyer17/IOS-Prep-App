@@ -15,7 +15,7 @@ class TeacherClassesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let teacher = TeacherListTableViewController.selectedteacher!
-        classes = getClassesFromTeacher(teacher)
+        classes = teacher.getClasses(true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,12 +27,29 @@ class TeacherClassesTableViewController: UITableViewController {
         
         cell.textLabel?.text = classes[indexPath.row].name
         if let block = classes[indexPath.row].blockLetter {
-            cell.detailTextLabel?.text = block
+            cell.detailTextLabel?.text = "\(block) block"
         } else {
             cell.detailTextLabel?.text = ""
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let index = indexPath.row
+        let classToEnroll = classes[index]
+        
+        
+        let confrimAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to join this class", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        confrimAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            classToEnroll.enrollStudent(dataSource.user!)
+        }))
+        
+        confrimAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in }))
+        
+        presentViewController(confrimAlert, animated: true, completion: nil)
+        
     }
     
 }
