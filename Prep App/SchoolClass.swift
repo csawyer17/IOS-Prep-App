@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class SchoolClass:CustomDebugStringConvertible {
+class SchoolClass:CustomDebugStringConvertible,Equatable {
     var id:Int
     var name:String
     var teacherId:Int
@@ -50,4 +50,8 @@ class SchoolClass:CustomDebugStringConvertible {
     func enrollStudent(user:User)  {
         Alamofire.request(.GET, "\(baseURL)enrollInClass/\(user.id!)/\(id)")
     }
+}
+
+func == (lhs:SchoolClass, rhs:SchoolClass)->Bool {
+    return lhs.id == rhs.id
 }

@@ -16,6 +16,16 @@ class TeacherClassesTableViewController: UITableViewController {
         super.viewDidLoad()
         let teacher = TeacherListTableViewController.selectedteacher!
         classes = teacher.getClasses(true)
+        removeAlreadyEnrolledClasses()
+    }
+    
+    func removeAlreadyEnrolledClasses() {
+        let enrolledClasses = dataSource.getEnrolledClasses(dataSource.user!)
+        for enrolledClass in enrolledClasses {
+            if let i = classes.indexOf(enrolledClass) {
+                classes.removeAtIndex(i)
+            }
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +59,6 @@ class TeacherClassesTableViewController: UITableViewController {
         confrimAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) in }))
         
         presentViewController(confrimAlert, animated: true, completion: nil)
-        
     }
     
 }

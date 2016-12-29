@@ -8,20 +8,30 @@
 
 import UIKit
 
+var reload = false
+
 class EnrolledClassesTableViewController: UITableViewController {
     
     var classes:[SchoolClass]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load")
         classes = dataSource.user!.getEnrolledClasses(true)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if reload {
+            classes = dataSource.user!.getEnrolledClasses(true)
+            tableView.reloadData()
+        }
+    }
+    
+    func refresh() {
         classes = dataSource.user!.getEnrolledClasses(true)
         print(classes)
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

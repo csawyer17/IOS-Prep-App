@@ -16,7 +16,7 @@ class User {
     var enrolledClasses:[SchoolClass]?
     
     init(username:String, password:String) {
-        //TODO
+        
     }
     
     func getEnrolledClasses(refresh:Bool) ->[SchoolClass] {
