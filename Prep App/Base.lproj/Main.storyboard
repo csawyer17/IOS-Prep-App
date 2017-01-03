@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="2126" y="312"/>
         </scene>
-        <!--Item-->
+        <!--Messages-->
         <scene sceneID="Pk3-n8-IY8">
             <objects>
-                <viewController id="S9d-qQ-9v0" sceneMemberID="viewController">
+                <viewController title="Messages" id="S9d-qQ-9v0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hVt-fB-Aao"/>
                         <viewControllerLayoutGuide type="bottom" id="tpj-3a-0Ya"/>
@@ -125,7 +125,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-x6-d1w">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-x6-d1w">
                                         <rect key="frame" x="0.0" y="570" width="600" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -141,7 +141,9 @@
                             <constraint firstItem="JpT-Pr-5Ka" firstAttribute="height" secondItem="vMo-wg-Npy" secondAttribute="height" id="ogJ-dh-q1J"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="aDM-hE-zws"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="ic_chat_48pt" selectedImage="ic_chat_48pt" id="aDM-hE-zws">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="5" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIC-DW-sdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,4 +231,7 @@
             <point key="canvasLocation" x="564" y="311"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_chat_48pt" width="48" height="48"/>
+    </resources>
 </document>

@@ -247,4 +247,29 @@ class DataCache {
         
         return resultArray
     }
+    
+    func getMessages(schoolClass:SchoolClass)->[Message] {
+        var resultArray = [Message]()
+        let id = schoolClass.id
+        
+        let semaphore = dispatch_semaphore_create(0)
+        
+        Alamofire.request(.GET, "\(baseURL)getMessagesFromClass/\(id)").responseJSON() { response in
+            if let json = response.result.value {
+                let jsonResonse = json as! NSArray
+                
+                print(jsonResonse)
+                
+                //dispatch the semaphore to inform the main thread that the request has finished
+                dispatch_semaphore_signal(semaphore)
+            }
+        }
+        
+        //wait for request to finish
+        while dispatch_semaphore_wait(semaphore, DISPATCH_TIME_NOW) != 0 {
+            NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate(timeIntervalSinceNow: 10))
+        }
+        
+        return resultArray
+    }
 }

@@ -16,19 +16,9 @@ class SchoolClass:CustomDebugStringConvertible,Equatable {
     var subjectId:Int
     var blockNum:Int?
     
-    var blockLetter:String? {
-        if let num = blockNum {
-            let startingValue = Int(("A" as UnicodeScalar).value)-1
-            return String(Character(UnicodeScalar(num + startingValue)))
-        }
-        return nil
+    var messages:[Message] {
+        return dataSource.getMessages(self)
     }
-    
-    var debugDescription: String {
-        return "[\"id\":\(id), \"name\":\(name), \"teacherId\":\(teacherId)," +
-            " \"subjectId\":\(subjectId), \"blockNum\(blockNum)), \"blockLetter\":\(blockLetter)\"]"
-    }
-    
     
     init(id:Int, name:String, teacherId:Int, subjectId:Int, blockNum:Int?) {
         self.id = id
@@ -38,8 +28,17 @@ class SchoolClass:CustomDebugStringConvertible,Equatable {
         self.blockNum = blockNum
     }
     
+    var blockLetter:String? {
+        if let num = blockNum {
+            let startingValue = Int(("A" as UnicodeScalar).value)-1
+            return String(Character(UnicodeScalar(num + startingValue)))
+        }
+        return nil
+    }
+    
+    
     func getTeacher()->Teacher? {
-        for teacher in dataSource.getTeachers() {
+        for teacher in dataSource.getTeachers(false) {
             if teacher.id == teacherId {
                 return teacher
             }
@@ -50,6 +49,12 @@ class SchoolClass:CustomDebugStringConvertible,Equatable {
     func enrollStudent(user:User)  {
         Alamofire.request(.GET, "\(baseURL)enrollInClass/\(user.id!)/\(id)")
     }
+    
+    var debugDescription: String {
+        return "[\"id\":\(id), \"name\":\(name), \"teacherId\":\(teacherId)," +
+            " \"subjectId\":\(subjectId), \"blockNum\(blockNum)), \"blockLetter\":\(blockLetter)\"]"
+    }
+
 }
 
 func == (lhs:SchoolClass, rhs:SchoolClass)->Bool {
