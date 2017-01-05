@@ -23,7 +23,6 @@ class User: CustomDebugStringConvertible{
         if !login(email, password: password) {
             throw LoginError.INVALID_LOGIN
         }
-        dataSource.user = self
     }
     
     func getEnrolledClasses(refresh:Bool) ->[SchoolClass] {

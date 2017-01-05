@@ -21,15 +21,23 @@ class LoginViewController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "loginGood" {
             do {
-                _ = try User(email: emailField.text!, password: passwordField.text!)
+                dataSource.user = try User(email: emailField.text!, password: passwordField.text!)
+                return true
             } catch LoginError.INVALID_LOGIN {
-                print("invalid login")
-                return false
+                handleLoginError("Invalid username or password");
             } catch {
-                print("unknown error")
+                handleLoginError("unknown error")
             }
 
         }
-        return true
+        return false
+    }
+    
+    func handleLoginError(error:String) {
+        emailField.text = ""
+        passwordField.text = ""
+        let alert = UIAlertController(title: "Alert", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
