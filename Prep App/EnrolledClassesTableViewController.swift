@@ -51,6 +51,15 @@ class EnrolledClassesTableViewController: UITableViewController {
         }
     
         return cell
-
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "toMessageView" {
+                let cell = sender as! UITableViewCell
+                let id = tableView.indexPathForCell(cell)?.row
+                MessageViewController.currentClass = classes[id!]
+            }
+        }
     }
 }
