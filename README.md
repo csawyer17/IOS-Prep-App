@@ -1,4 +1,4 @@
-*Prep App - by Lenny Litvak, Chris Jerret, and Cole Sawyer*
+*Prep App - by Chris Jerret, Lenny Litvak, and Cole Sawyer*
 
 ##OVERVIEW:
 
@@ -14,3 +14,5 @@ students and teachers of a Prep class.
         message with your fellow students or with your teacher to ask questions
         about homework assignments, projects, or any other school-related
         topics.
+        The app interfaces with out PHP and SQL based backend, which provides
+        clean and scalible performance.
