@@ -16,7 +16,6 @@ class EnrolledClassesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load")
         classes = dataSource.user!.getEnrolledClasses(true)
     }
     
