@@ -10,7 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,10 @@ class LoginViewController: UIViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "loginGood" {
             do {
-                _ = try User(username: usernameField.text!, password: passwordField.text!)
+                _ = try User(email: emailField.text!, password: passwordField.text!)
             } catch LoginError.INVALID_LOGIN {
                 print("invalid login")
+                return false
             } catch {
                 print("unknown error")
             }

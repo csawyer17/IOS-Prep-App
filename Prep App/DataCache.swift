@@ -22,10 +22,6 @@ class DataCache {
     init() {
         teachers = getTeachers()
         subjects = getSubjects()
-        
-        let user = try! User(username: "username", password: "password")
-        user.id = 1
-        self.user = user
     }
     
     func getTeachers(refresh:Bool)->[Teacher] {
