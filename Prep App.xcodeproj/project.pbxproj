@@ -18,6 +18,7 @@
 		4C42314A1E11ADE700DCCBE9 /* TeacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */; };
 		4C88D8931E131730009707EB /* TeacherClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */; };
 		4CAB54191E1DDD3800C2D0EF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAB54181E1DDD3800C2D0EF /* Media.xcassets */; };
+		4CAB541F1E1DEEB500C2D0EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB541E1E1DEEB500C2D0EF /* LoginViewController.swift */; };
 		4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */; };
 		4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */; };
 		4CD3EB691E0E12ED00AAFE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */; };
@@ -110,6 +111,7 @@
 		4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewController.swift; sourceTree = "<group>"; };
 		4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherClassesTableViewController.swift; sourceTree = "<group>"; };
 		4CAB54181E1DDD3800C2D0EF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		4CAB541E1E1DEEB500C2D0EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CD3EB5B1E0E12ED00AAFE90 /* Prep App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prep App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD3EB631E0E12ED00AAFE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */,
 				4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */,
 				4C1829561E1C2F2100360A29 /* MessageViewController.swift */,
+				4CAB541E1E1DEEB500C2D0EF /* LoginViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				4C1829571E1C2F2100360A29 /* MessageViewController.swift in Sources */,
 				4C18294A1E1C2BF900360A29 /* Message.swift in Sources */,
 				4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */,
+				4CAB541F1E1DEEB500C2D0EF /* LoginViewController.swift in Sources */,
 				4CDDF4A81E11D8D70044DCD4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

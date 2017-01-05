@@ -7,16 +7,18 @@
 //
 
 import Foundation
+import Alamofire
 
 class User {
     var username:String?
-    var password:String?
+    var password:String
     var id:Int?
     
     var enrolledClasses:[SchoolClass]?
     
-    init(username:String, password:String) {
+    init(username:String, password:String) throws {
         
+        throw LoginError.INVALID_LOGIN
     }
     
     func getEnrolledClasses(refresh:Bool) ->[SchoolClass] {
@@ -25,4 +27,13 @@ class User {
         }
         return enrolledClasses!
     }
+    
+    private func login(username:String, password:String)->Bool {
+        Alamofire.req
+        return false
+    }
+}
+
+enum LoginError: ErrorType {
+    case INVALID_LOGIN
 }

@@ -23,7 +23,7 @@ class DataCache {
         teachers = getTeachers()
         subjects = getSubjects()
         
-        let user = User(username: "Chris", password: "Password")
+        let user = try! User(username: "username", password: "password")
         user.id = 1
         self.user = user
     }
