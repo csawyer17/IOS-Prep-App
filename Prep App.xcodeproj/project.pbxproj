@@ -17,9 +17,9 @@
 		4C4231411E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */; };
 		4C42314A1E11ADE700DCCBE9 /* TeacherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */; };
 		4C88D8931E131730009707EB /* TeacherClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */; };
+		4CAB54191E1DDD3800C2D0EF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAB54181E1DDD3800C2D0EF /* Media.xcassets */; };
 		4CD3EB5F1E0E12ED00AAFE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */; };
 		4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB621E0E12ED00AAFE90 /* Main.storyboard */; };
-		4CD3EB661E0E12ED00AAFE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */; };
 		4CD3EB691E0E12ED00AAFE90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD3EB671E0E12ED00AAFE90 /* LaunchScreen.storyboard */; };
 		4CD3EB961E0E138200AAFE90 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EB951E0E138200AAFE90 /* Teacher.swift */; };
 		4CD3EBB51E0E1C9500AAFE90 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD3EBB41E0E1C9500AAFE90 /* Subject.swift */; };
@@ -109,10 +109,10 @@
 		4C4231401E11ABEA00DCCBE9 /* EnrolledClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnrolledClassesTableViewController.swift; sourceTree = "<group>"; };
 		4C4231491E11ADE700DCCBE9 /* TeacherListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewController.swift; sourceTree = "<group>"; };
 		4C88D8921E131730009707EB /* TeacherClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherClassesTableViewController.swift; sourceTree = "<group>"; };
+		4CAB54181E1DDD3800C2D0EF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		4CD3EB5B1E0E12ED00AAFE90 /* Prep App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prep App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD3EB631E0E12ED00AAFE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD3EB681E0E12ED00AAFE90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD3EB951E0E138200AAFE90 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				4CD3EB5E1E0E12ED00AAFE90 /* AppDelegate.swift */,
-				4CD3EB651E0E12ED00AAFE90 /* Assets.xcassets */,
 				4CD3EB6A1E0E12ED00AAFE90 /* Info.plist */,
+				4CAB54181E1DDD3800C2D0EF /* Media.xcassets */,
 			);
 			name = "supporting files";
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD3EB691E0E12ED00AAFE90 /* LaunchScreen.storyboard in Resources */,
-				4CD3EB661E0E12ED00AAFE90 /* Assets.xcassets in Resources */,
+				4CAB54191E1DDD3800C2D0EF /* Media.xcassets in Resources */,
 				4CD3EB641E0E12ED00AAFE90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
