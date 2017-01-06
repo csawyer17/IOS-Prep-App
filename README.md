@@ -36,11 +36,7 @@ alamofire framework to make both Get and Post request.
         ..*Allows users to have a class wide chat.
 ## No Yet Started
 1. In app regitration.
-     
-## Abandoned
-1. Teacher only chat.
-2. Teacher App.
-        ..*Would in essense require developing another app and consume too much time.
+2. Teacher only chat.
        
 ## Blind Spots
 1. Would have been helpful if we focued on more advanced UI design, especially constrains and stack views.
@@ -49,6 +45,7 @@ alamofire framework to make both Get and Post request.
 
 ## Resources
 1. A web server would have been useful to allow us to deploy the backend easier.    
+2. Some way to deploy to app store so we could allow more classmates to test out the app in their devices so we could find more bugs and get user feedback.
 
 ## Known bugs
 1. Table does not relaod data after enrolling in a class.
