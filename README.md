@@ -31,17 +31,25 @@ alamofire framework to make both Get and Post request.
 4. Server backend (Chris)
 5. Server Communication and JSON Parsing (Lenny)
         
-## Todo
+## In Progress
 1. Message board for class(Chris and Lenny)
-..*Allows users to have a class wide chat
+        ..*Allows users to have a class wide chat.
+## No Yet Started
+1. In app regitration.
      
 ## Abandoned
 1. Teacher only chat.
-        
+2. Teacher App.
+        ..*Would in essense require developing another app and consume too much time.
+       
+## Blind Spots
+1. Would have been helpful if we focued on more advanced UI design, especially constrains and stack views.
+2. Web request and netwoeking in swift.
+3. Tableviews.
+
+## Resources
+1. A web server would have been useful to allow us to deploy the backend easier.    
+
 ## Known bugs
 1. Table does not relaod data after enrolling in a class.
 2. Requests made using HTTP not HTTPS.
-        
-## Resources
-1. A web server would have been useful to allow us to deploy the backend easier.
-
