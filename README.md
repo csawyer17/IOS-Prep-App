@@ -1,4 +1,4 @@
-*Prep App - by Chris Jerret, Lenny Litvak, and Cole Sawyer*
+#*Prep App - by Chris Jerret, Lenny Litvak, and Cole Sawyer*
 
 ##OVERVIEW:
 
