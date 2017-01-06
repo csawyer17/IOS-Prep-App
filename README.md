@@ -15,7 +15,7 @@ For any classes you are registered you will be able to enter a group
 message with your fellow students or with your teacher to ask questions
 about homework assignments, projects, or any other school-related
 topics.
-<em>The app interfaces with our PHP and SQL based backend, which provides
+<em>The app interfaces with our PHP and SQL based [backend](https://github.com/chrisj1/PrepAppBackendProduction), which provides
 clean and scalible performance.</em>
 <em>The backend runs on a ubuntu web server using a nginx web server.</em>
         
@@ -28,7 +28,7 @@ alamofire framework to make both Get and Post request.
 1. Enrolling in classes (Chris)
 2. Authentication (Chris)
 3. Chat UISs (Cole)
-4. Server backend (Chris)
+4. [Server backend](https://github.com/chrisj1/PrepAppBackendProduction) (Chris)
 5. Server Communication and JSON Parsing (Lenny)
         
 ## In Progress
