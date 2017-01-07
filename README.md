@@ -33,7 +33,7 @@ alamofire framework to make both Get and Post request.
         
 ## In Progress
 1. Message board for class(Chris and Lenny)
-        ..*Allows users to have a class wide chat.
+      ..*Allows users to have a class wide chat.
 ## No Yet Started
 1. In app regitration.
 2. Teacher only chat.
